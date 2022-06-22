@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="hw_join.css" />
     <link rel="stylesheet" href="reset.css" />
+    <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
   <body>
     <div class="resister_wrap">
@@ -34,6 +35,7 @@
               <div class="sign_password">
                 <label>비밀번호</label>
                 <input id="input_password" />
+                <i class="fa fa-eye fa-lg"></i>
                 <div class="reBox">
                   ※ 비밀번호는 8자 이상 영어 대소문자와 숫자, 특수문자를
                   포함하여 입력해 주세요.
@@ -42,6 +44,7 @@
               <div class="sign_password_chk">
                 <label>비밀번호 확인</label>
                 <input id="input_password_chk" />
+                <i class="fa fa-eye fa-lg"></i>
                 <div class="reBox"></div>
               </div>
               <div class="sign_id">
@@ -54,11 +57,11 @@
             </div>
             <div class="check_box">
               <div class="agree_use">
-                <span><input type="checkbox" /> </span>
+                <span><input id="first_check" type="checkbox" /> </span>
                 <span>이용약관 동의<em class="emBox"> (필수)</em></span>
               </div>
               <div class="agree_person">
-                <span><input type="checkbox" /> </span>
+                <span><input id="second_check" type="checkbox" /> </span>
                 <span
                   >개인정보 수직 및 이용 동의<em class="emBox">
                     (필수)</em
@@ -66,7 +69,7 @@
                 >
               </div>
               <div class="agree_event">
-                <span><input type="checkbox" /> </span>
+                <span><input id="third_check" type="checkbox" /> </span>
                 <span
                   >이벤트 등 프로모션 메일 수신 동의<em class="emBox"></em>
                     (선택)</em

@@ -1,0 +1,19 @@
+{
+    "user":[
+        {
+            "email" : "aaaa@naver.com",
+            "password" : "qwerasdf1!",
+            "name" : "uuuu"
+        },
+        {
+            "email" : "bbbb@naver.com",
+            "password" : "qwerasdf1!",
+            "name" : "oooo"
+        },
+        {
+            "email" : "cccc@naver.com",
+            "password" : "qwerasdf1!",
+            "name" : "kkkk"
+        }
+    ]
+}
