@@ -90,6 +90,7 @@ function loadJson(){
         console.log('회원정보 활성화 실패')
     });
 }
+
 // loadJson().then((user)=>{
 //     for (const key in user) {
 //             console.log(user[key].name)
@@ -100,11 +101,51 @@ function User(email,password,name){
     this.password=password;
     this.name=name;
 }
-//input 리셋 함수
-function reset(input){
-    input.value="";
+// json에 데이터 추가
+// loadJson().then((user)=>{
+//     console.log("sksk");
+//     user.push(JSON.parse( '{"email":"asdf@naver.com","password" :"uiopuiop1@","name" :"nnnnn"}'));
+//     console.log(user);
+    
+//         // new User("asdf@naver.com","uiopuiop1@","nnnnn"))
+    
+// });
+// loadJson().then((user)=>{
+    //     console.log(user);
+    // })
+    //input 리셋 함수
+    function reset(input){
+        input.value="";
+    }
+//암호 숨김/보임 활성화
+let eye1=document.querySelector(".password_eye1");
+function eye_Btn1(){
+    if($(".password_eye1").hasClass('active_eye')){
+        let check=document.querySelector(".password_eye1");
+        check.classList.remove("active_eye");
+        input_password.type="password";
+        check.src="images/eye_close.png";
+    }else{
+        let check=document.querySelector(".password_eye1");
+        check.className+=" active_eye";
+        input_password.type="";
+        check.src="images/eye_open.png";
+    }
 }
-
+let eye2=document.querySelector(".password_eye2");
+function eye_Btn2(){
+    if($(".password_eye2").hasClass('active_eye')){
+        let check=document.querySelector(".password_eye2");
+        check.classList.remove("active_eye");
+        input_password_chk.type="password";
+        check.src="images/eye_close.png";
+    }else{
+        let check=document.querySelector(".password_eye2");
+        check.className+=" active_eye";
+        input_password_chk.type="";
+        check.src="images/eye_open.png";
+    }
+}
 function join_Btn(){
     let textEmail=input_email.value;
     let textPassword=input_password.value;
@@ -163,8 +204,12 @@ function join_Btn(){
     else{
         information.push(new User(textEmail,textPassword,textId));   
     }
-    console.log(information);
 }
 join_sub_btn.addEventListener('click',join_Btn);
+eye1.addEventListener('click',eye_Btn1);
+eye2.addEventListener('click',eye_Btn2);
+
+
+
 
 
